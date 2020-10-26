@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>flask face detection api</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('.static', filename='main.css') }}"
+    />
+  </head>
+  <body>
+    <h1 class="title">FLASK FACE DETECTION API</h1>
+    <form>
+      <div id="drop-area">
+        <?xml version="1.0" ?><svg
+          height="50px"
+          width="50px"
+          viewBox="0 0 24 24"
+          preserveAspectRatio
+          fill="#9900ff"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title />
+          <g data-name="Layer 2" id="Layer_2">
+            <path
+              d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm2.29,11.71L13,12.41V18H11V12.41L9.71,13.71,8.29,12.29,12,8.59l3.71,3.71ZM16,8H8V6h8Z"
+            />
+          </g>
+        </svg>
+        <p>Drag and drop your image</p>
+        <p>OR</p>
+        <button class="launchFileBrowser">
+          BROWSE
+          <input type="file" id="input" accept="image/*" />
+        </button>
+       
+      </div>
+    </form>
+    <div class="image">
+      <canvas id="img"></canvas>
+    </div>
+  </body>
+  <script src="{{ url_for('.static', filename='main.js') }}" defer></script>
+</html>
